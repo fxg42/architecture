@@ -1,0 +1,171 @@
+% preambule (fold)
+\documentclass{article}
+
+\usepackage[french]{babel}
+\usepackage{endnotes}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage{subfig}
+
+% font definitions (fold)
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Numbers=OldStyle, Ligatures={Common}, Mapping=tex-text} \setromanfont[ItalicFont={* Slanted}, BoldFont={* Demi}, SmallCapsFont={* Caps}] {Latin Modern Roman}
+\setsansfont{Latin Modern Sans}
+\setmonofont[Scale=MatchLowercase]{Monaco}
+\newfontfamily\zapfino{Zapfino}
+\newfontfamily\typewriter{American Typewriter}
+% font definitions (end)
+% custom commands and environment (fold)
+\newcommand{\footlink}[1] {\endnote{\href{#1}{\texttt{#1}}}}
+\newcommand{\ie} {c.-à-d. }
+\newcommand{\eg} {p.~ex. }
+\newenvironment{resumeChapitre}
+  {\begin{center}\small\bf\begin{em}}
+  {\end{em}\end{center}}
+% custom commands and environment (end)
+% filigrane (fold)
+\usepackage{eso-pic,xcolor}
+\AddToShipoutPicture {
+  \unitlength=1in
+  \put(1.55,3.5) {
+    \rotatebox{45} {
+      \textcolor{lightgray} {
+        \fontsize{48}{48}\bf\typewriter COPIE DE TRAVAIL
+      }
+    }
+  }
+}
+% filigrane (end)
+% captions pour listings (fold)
+\usepackage{caption}
+\usepackage{color}
+\DeclareCaptionFont{white} {
+  \color{white}\sffamily
+}
+\DeclareCaptionFormat{listing} {
+  \colorbox[cmyk]{0.43, 0.35, 0.35, 0.01} {
+    \parbox{\textwidth-17pt} {
+      \hspace{7pt}#1#2#3
+    }
+  }
+}
+\captionsetup[lstlisting] {
+  format=listing,
+  labelfont=white,
+  textfont=white,
+  singlelinecheck=false,
+  margin=0pt,
+  font={bf,footnotesize}
+}
+% captions pour listings (end)
+% code environment declaration (fold)
+\usepackage{listings}
+\lstnewenvironment{snippet}[1][] {
+  \lstset {
+    basicstyle=\small\ttfamily,
+    stringstyle=\small\ttfamily,
+    showstringspaces=false, #1
+  }
+}{}
+\lstnewenvironment{code}[1][] {
+  \lstset {
+    basicstyle=\small\ttfamily,
+    xleftmargin=17pt,
+    framexleftmargin=14pt,
+    framexrightmargin=-3pt,
+    framexbottommargin=4pt,
+    frame=b, #1
+  }
+}{}
+% \begin{code}[gobble=2,label=helloworld,caption=Bonjour le monde]
+%   println "Hello World"
+%   // ...
+% \end{code}
+% code environment declaration (end)
+% césures de mots (fold)
+\lccode`\'="2019\lccode"2019="2019 % césure de mots avec un apostrophe
+\hyphenation{Java-Script immu-able l'in-for-ma-tion Internet-Explorer}
+% césures de mots (end)
+% preambule (end)
+
+\begin{document}
+
+% title (fold)
+\title{}
+\author{François-Xavier Guillemette}
+\maketitle
+% title (end)
+
+\begin{abstract}
+
+\end{abstract}
+
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\section{Technologies utilisées} % (fold)
+\label{sec:technologies_utilisees}
+
+\subsection{JAX-RS} % (fold)
+\label{sub:jax_rs}
+% subsection jax_rs (end)
+
+\subsection{Groovy, JavaScript, Java} % (fold)
+\label{sub:groovy}
+% subsection groovy (end)
+
+\subsection{Spring Framework} % (fold)
+\label{sub:spring_framework}
+% subsection spring_framework (end)
+
+\subsection{Quartz} % (fold)
+\label{sub:quartz}
+% subsection quartz (end)
+
+\subsection{JMX} % (fold)
+\label{sub:jmx}
+% subsection jmx (end)
+
+\subsection{Hibernate} % (fold)
+\label{sub:hibernate}
+% subsection hibernate (end)
+
+\subsection{PostgreSQL} % (fold)
+\label{sub:postgresql}
+% subsection posgresql (end)
+
+\subsection{Groovlet} % (fold)
+\label{sub:groovlet}
+% subsection groovlet (end)
+
+\subsection{Tomcat} % (fold)
+\label{sub:tomcat}
+% subsection tomcat (end)
+
+\subsection{jQuery, HTML, CSS} % (fold)
+\label{sub:jquery}
+% subsection jquery (end)
+
+\subsection{Maven} % (fold)
+\label{sub:maven}
+% subsection maven (end)
+
+% section technologies_utilisées (end)
+
+\section{Service métier} % (fold)
+\label{sec:service_metier}
+% section service_métier (end)
+
+\section{Coordonateur de services} % (fold)
+\label{sec:coordonateur_de_services}
+% section coordonateur_de_services (end)
+
+\section{Présentation web} % (fold)
+\label{sec:presentation_web}
+% section présentation_web (end)
+
+\end{document}
